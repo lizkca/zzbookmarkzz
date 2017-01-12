@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'haml'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.2'
@@ -43,6 +44,7 @@ group :development, :test do
   gem 'spring'
   
   gem 'sqlite3'
+  
 end
 
 group :production do
