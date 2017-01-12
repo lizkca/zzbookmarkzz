@@ -1,0 +1,14 @@
+-# This file is app/views/bookmarks/index.html.haml
+%h1 All Bookmarks
+
+%table#bookmarks
+  %thead
+    %tr
+      %th websites
+      %th description
+    %tbody
+      - @bookmarks.each do |bookmark|
+        %tr
+          %td= bookmark.address
+          %td= bookmark.description
+          
