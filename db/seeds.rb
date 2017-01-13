@@ -7,9 +7,9 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 more_bookmarks = [
-  {:address => 'hao123.com', :description => '上网从这里开始'
+  {:address => 'http://hao123.com', :description => '上网从这里开始'
   },
-  {:address => 'www.csdn.net', :description => 'csdn'}
+  {:address => 'http://www.csdn.net', :description => 'csdn'}
 ]
 
 more_bookmarks.each do |bookmark|

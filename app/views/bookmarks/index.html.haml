@@ -9,6 +9,5 @@
     %tbody
       - @bookmarks.each do |bookmark|
         %tr
-          %td= bookmark.address
-          %td= bookmark.description
+          %td= link_to(bookmark.description, bookmark.address)
           
