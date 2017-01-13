@@ -1,0 +1,9 @@
+-# in app/views/bookmarks/show.html.haml
+
+%h2 Details about #{@bookmark.address}
+
+%h3 Description:
+
+%p#description= @bookmark.description
+
+= link_to 'Back to bookmark list', bookmarks_path
