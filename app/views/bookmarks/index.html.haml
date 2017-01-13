@@ -5,8 +5,12 @@
   %thead
     %tr
       %th websites
+      %th edit
     %tbody
       - @bookmarks.each do |bookmark|
         %tr
           %td= link_to(bookmark.description, bookmark.address)
+          %td= link_to('edit', edit_bookmark_path(bookmark))
+          
+= link_to 'Add new bookmark', new_bookmark_path
           

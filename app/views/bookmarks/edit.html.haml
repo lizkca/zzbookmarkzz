@@ -1,0 +1,11 @@
+%h2 Edit Bookmark
+
+= form_tag bookmark_path(@bookmark), :method => :put do
+
+  = label :bookmark, :address, 'Address'
+  = text_field :bookmark, 'address'
+  
+  = label :bookmark, :description, 'Description'
+  = text_area :bookmark, :description 
+  
+  = submit_tag 'Save Changes'
