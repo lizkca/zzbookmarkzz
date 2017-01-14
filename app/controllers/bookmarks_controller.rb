@@ -26,7 +26,7 @@ class BookmarksController < ApplicationController
   
   def update
     @bookmark = Bookmark.find params[:id]
-    @bookmark.update_attributes!(params[:bookmark])
+    @bookmark.update(bookmark_params)
     flash[:notice] = "#{@bookmark.address} was successfully updated."
     redirect_to bookmark_path(@bookmark)
   end
