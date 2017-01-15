@@ -5,12 +5,11 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-
-more_bookmarks = [
-  {:address => 'http://hao123.com', :description => '上网从这里开始'
-  },
-  {:address => 'http://www.csdn.net', :description => 'csdn'}
-]
+@doc = Nokogiri::XML(File.open("database.xml"))
+more_bookmarks = []
+@doc.xpath("//bookmark").each do |bm|
+  more_bookmarks << {:address => bm.children[3]['href'], :description => bm.children[5].text}
+  end
 
 more_bookmarks.each do |bookmark|
   Bookmark.create!(bookmark)
