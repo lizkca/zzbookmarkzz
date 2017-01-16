@@ -1,11 +1,5 @@
 %h2 Create New Movie
 
 = form_tag bookmarks_path, :method => :post do
-
-  = label :bookmark, :address, 'Address'
-  = text_field :bookmark, :address
-  
-  = label :bookmark, :description, 'Description'
-  = text_area :bookmark, :description
-  
+  render :partial => 'bookmark_form'
   = submit_tag 'Save Change'
