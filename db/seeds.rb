@@ -7,8 +7,9 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 @doc = Nokogiri::XML(File.open("database.xml"))
 more_bookmarks = []
-@doc.xpath("//bookmark").each do |bm|
-  more_bookmarks << {:address => bm.children[3]['href'], :description => bm.children[5].text}
+@doc.xpath("//a").each do |bm|
+  more_bookmarks << {:address => bm['href'],
+                     :description => bm.text}
   end
 
 more_bookmarks.each do |bookmark|
