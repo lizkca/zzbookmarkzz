@@ -5,12 +5,17 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-@doc = Nokogiri::XML(File.open("database.xml"))
+Bookmark.delete_all
+
+@doc = Nokogiri::HTML(File.open("db.html"))
 more_bookmarks = []
-@doc.xpath("//a").each do |bm|
+count = 0
+@doc.xpath('//a').each do |bm|
+  count = count + 1
   more_bookmarks << {:address => bm['href'],
                      :description => bm.text}
   end
+  print count
 
 more_bookmarks.each do |bookmark|
   Bookmark.create!(bookmark)
