@@ -47,6 +47,8 @@ group :development, :test do
   
   gem 'sqlite3'
   
+  gem 'bootstrap-sass'
+  
 end
 
 group :production do
