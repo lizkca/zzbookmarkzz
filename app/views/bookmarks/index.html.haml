@@ -1,8 +1,5 @@
 -# This file is app/views/bookmarks/index.html.haml
-
-%h1 Bookmarks
-=@bookmarks.count
-
+= @bookmarks.count
 %table#bookmarks
   %thead
     %tr
@@ -18,11 +15,4 @@
           
 = link_to 'Add new bookmark', new_bookmark_path
 
-<a href="http://hao123.com" ICON="data:image/png;base64,iVBORw0KGgoAAAANSUhEUoAAABAAAAAQCAYAAAAf8/9hAAABGUlEQVQ4jaWSMUoDQRSG/wxLzLLFI1kQsdgTJCfYBa3nBnMGrbOgtYKpE8gNtk+xtYLWCnoBN42NyFNCROJo4wyG2Qkh+1fDzD/f++e9afWeuz9oINHkMgAEvoO0k9n1fFWhWlXbAWQocdG9RBIka/vTjyneNWNIOeKqVw9QkcI4noA14/T1BNX3HACQ7aUYUg7W7CRomSaSINwfPoA14/jlyDEbOIC1BLaJMpQgQRjxVW2lYlGgXJbOvgWYNxeLwjEZ3X3e+gG7ygLMmFSkvOZ+e+AHlMsS/DcmEuQY005WC7cA1ozztzMkQYLrgxuoSIEEod8eIKccs/3Z5jEayVBiHE+cFL6P5AD+RzZ6+nqsrb4RsK0aj/EX1p9p3EPi+z0AAAAASUVORK5CYII=">YOO</a>
-<link rel="shortcut icon" type="image/png" href="/favicon.png"/>
-<link rel="shortcut icon" type="image/png" href="http://eg.com/favicon.png"/>
-
-<link rel="shortcut icon" type="image/ico" href="/webico.ico"/>
-<link rel="shortcut icon" type="image/ico" href="/webico.ico"/>
-Hello
-          
+       

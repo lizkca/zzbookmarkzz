@@ -7,5 +7,8 @@
     = csrf_meta_tags
     
   %body
-    #main
+    %div{:class => "container-fluid"}
+      = render "common/navbar"
       = yield
+      = render "common/footer"
+      
