@@ -1,6 +1,5 @@
 class BookmarksController < ApplicationController
   def index
-    flash[:notice] = "welcome zzbookmarkzz.com"
     @bookmarks = Bookmark.all
   end
   
