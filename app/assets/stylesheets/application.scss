@@ -17,6 +17,9 @@
 /* Simple CSS styling for zzbookmarkzz app */
 /* Add these lines to app/assets/stylesheets/application.css */
 
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
 html, body {
   margin: 0;
   padding: 0;
