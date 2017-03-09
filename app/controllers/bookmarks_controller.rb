@@ -39,6 +39,16 @@ class BookmarksController < ApplicationController
     redirect_to bookmarks_path
   end
   
+  def sort_by_description
+    @bookmarks = Bookmark.all.sort_by {|bookmark| bookmark.description}
+  end
+  
+  def sort_by_add_time
+  end
+  
+  def sort_by_hot
+  end
+  
   private
   
   def bookmark_params
