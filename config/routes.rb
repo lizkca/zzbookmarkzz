@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   resources :bookmarks
   root :to => redirect('/bookmarks')
   get '/sort_by_description' => 'bookmarks#sort_by_description'
+  get '/sort_by_update' => 'bookmarks#sort_by_update'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

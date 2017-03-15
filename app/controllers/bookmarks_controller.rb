@@ -43,10 +43,24 @@ class BookmarksController < ApplicationController
     @bookmarks = Bookmark.all.sort_by {|bookmark| bookmark.description}
   end
   
-  def sort_by_add_time
+  def sort_by_update
+    @bookmarks = Bookmark.all.sort_by {|bookmark| bookmark.updated_at}
+    @bookmarks.reverse!
   end
   
   def sort_by_hot
+  end
+  
+  def some_random
+  end
+  
+  def some_explore
+  end
+  
+  def some_usefull
+  end
+  
+  def some_excellent
   end
   
   private

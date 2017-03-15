@@ -1,0 +1,18 @@
+-# This file is app/views/bookmarks/index.html.haml
+= @bookmarks.count
+%table#bookmarks
+  %thead
+    %tr
+      %th websites
+      %th edit
+      %td delete
+    %tbody
+      - @bookmarks.each do |bookmark|
+        %tr
+          %td= link_to(bookmark.description, bookmark.address)
+          %td= link_to('Edit', edit_bookmark_path(bookmark))
+          %td= button_to 'Delete', bookmark_path(bookmark), :method => :delete, :confirm => 'Are you sure?'
+          
+= link_to 'Add new bookmark', new_bookmark_path
+
+       
