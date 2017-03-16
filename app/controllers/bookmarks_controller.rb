@@ -1,7 +1,6 @@
 class BookmarksController < ApplicationController
   def index
-    @bookmarks = Bookmark.all.sort_by { |bookmark| bookmark.created_at }
-    @bookmarks.reverse!
+    @bookmarks = Bookmark.all
   end
   
   def show
